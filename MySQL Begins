@@ -1,0 +1,21 @@
+# Mysql-Database
+show databases;
+create database emp;
+use emp;
+create table EMPLOYEE(emp_id int primary key auto_increment,emp_name varchar(20),gen varchar(16),phone_no varchar(10),emp_salary bigint);
+describe EMPLOYEE;
+insert into EMPLOYEE values(1,'Naveena','F',9752828367,50000);
+insert into EMPLOYEE values(2,'padma','F',9572625277,60000);
+select* from EMPLOYEE;
+drop table EMPLOYEE;
+create table bill_detaila(bill_id int primary key auto_increment,name_ varchar(20) not null,phone_no varchar(10) not null unique,bill_amount bigint not null);
+describe bill_details;
+insert into bill_details values(1,'sanjay',987654321,1000000000000q);
+insert into bill_details (bill_id,name_,phone_no,bill_amount)value(2,'logesh',897654325,297776677777);
+insert into bill_details (bill_id,name_,phone_no,bill_amount)value(3,'syed',789654350,987765555555);
+select*from bill_details;
+update bill_details set name_='sanju' where bill_id=1;
+                            
+alter table bill_details rename column bill_amount to amount;
+alter table bill_details add column bill_date date not null;
+							
